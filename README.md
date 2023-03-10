@@ -18,3 +18,9 @@ One more Vai na Web activity/challenge was carried out. The goal was basically t
 <br/>
 Mais uma atividade/desafio do Vai na Web foi realizada. O objetivo foi, basicamente, criar um tipo de aplicação de lista de tarefas. Você escreve a tarefa no input com placeholder e clica no botão para adicionar a tarefa. Você tem a opção de remover a tarefa se desejar. Como sou uma iniciante, a aplicação ainda é bem limitada. Mas funciona.
 
+<br/>
+
+## Languagens:
+- HTML
+- CSS
+- Javascript
