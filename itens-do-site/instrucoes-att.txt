@@ -1,0 +1,6 @@
+ATIVIDADE EM AULA
+
+Fazer uma lista de tarefas (To Do List)
+input para escrever 
+botão para adicionar em uma lista
+botão para remover o item da lista

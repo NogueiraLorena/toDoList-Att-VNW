@@ -1,0 +1,29 @@
+this.setState({
+      minhaLista: this.state.minhaLista.concat({
+        afazeres: this.state.afazeres,
+        id: Math.random()
+      }),
+      afazeres: ""
+    });
+  };
+
+erase = (id) => {
+this.setState({
+      minhaLista: this.state.minhaLista.filter((item) => {
+        return item.id !== id;
+      })
+    });
+  };
+
+
+ 
+<input onChange={this.hadleChange} />
+        <button onClick={this.addTask}>Adicionar Afazer</button>
+        {this.state.minhaLista.map((item) => (
+          <>
+            <li>{item.afazer}</li>
+            <li>{item.id}</li>
+            <button
+              onClick={() => {
+                this.erase(item.id);
+              }}
