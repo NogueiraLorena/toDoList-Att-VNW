@@ -20,7 +20,9 @@ Mais uma atividade/desafio do Vai na Web foi realizada. O objetivo foi, basicame
 
 <br/>
 
-## Languagens:
+### Linguagens / Languagens:
 - HTML
 - CSS
 - Javascript
+
+<br/>
