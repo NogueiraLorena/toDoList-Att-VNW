@@ -1,0 +1,156 @@
+import "./styles.css";
+import React from "react";
+
+export default class App extends React.Component {
+  state = {
+    afazeres: "",
+    minhaLista: []
+  };
+  hadleChange = (event) => {
+    this.setState({
+      afazeres: event.target.value
+    });
+  };
+
+  addTask = () => {
+    this.setState({
+      minhaLista: this.state.minhaLista.concat({
+        afazeres: this.state.afazeres,
+        id: Math.random()
+      }),
+      afazeres: ""
+    });
+  };
+
+  erase = (id) => {
+    this.setState({
+      minhaLista: this.state.minhaLista.filter((item) => {
+        return item.id !== id;
+      })
+    });
+  };
+
+  render() {
+    return (
+      //  handleChange
+      //
+      //     return (
+      <>
+        <h1> Atividade em Aula </h1>
+        <h2> To Do List - (10/03)</h2>
+        <input placeholder="Add um Afazer" onChange={this.hadleChange} />
+        <button className="addButton" onClick={this.addTask}>
+          Adicionar Afazer
+        </button>
+
+        {this.state.minhaLista.map((item) => (
+          <div className="conteinerList">
+            <li>{item.afazeres}</li>
+
+            <button
+              className="eraseButton"
+              onClick={() => {
+                this.erase(item.id);
+              }}
+            >
+              x
+            </button>
+          </div>
+        ))}
+        <p> A aplicação é limitada. Tenha cuidado ao usar. </p>
+      </>
+    );
+  }
+}
+
+=--=-=-=--===--==---=--===--==---=--===--==---=--===--==---=--===--==---=--===--==---=--===--==---=--===--==---=--===--==---=--===--==---=--===--==---=--===--==---=-
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  color: #f0f8ff;
+  background-color: rgb(117, 66, 66);
+  justify-items: center;
+}
+
+#root {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addButton {
+  margin: 0.7em;
+  font-size: 15px;
+  font-family: Arial;
+  font-family: monospace;
+  width: 146px;
+  height: 50px;
+  border-width: 1px;
+  color: rgba(235, 25, 25, 1);
+  border-color: #dcdcdc;
+  font-weight: bold;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: inset -13px -3px 0px -11px rgba(189, 181, 181, 1);
+  text-shadow: inset 0px 1px 0px #ffffff;
+  background: linear-gradient(#ededed, #dfdfdf);
+}
+
+.addButton:hover {
+  background: linear-gradient(#dfdfdf, #ededed);
+}
+
+h1,
+h2 {
+  margin: 0.9em;
+  font-family: Arial;
+  font-family: monospace;
+  font-weight: 1em;
+  font-size: 2em;
+}
+
+.conteinerList {
+  color: #fdfdfd;
+  height: 5rem;
+  width: 5rem;
+  display: inline-block;
+}
+
+.eraseButton {
+  font-size: 15px;
+  font-family: Arial;
+  width: 30px;
+  height: 30px;
+  border-width: 1px;
+  color: #fff;
+  border-color: #d0451b;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-shadow: inset 0px 1px 0px 0px #cf866c;
+  text-shadow: inset 0px 1px 0px #854629;
+  background: linear-gradient(#754242, #9b5f5f);
+}
+
+.eraseButton:hover {
+  background: linear-gradient(#d0451b, #d0451b);
+}
+
+p {
+  margin-top: 2em;
+  font-family: Arial;
+  font-family: monospace;
+  font-weight: 1em;
+  font-size: 0.9em;
+}
