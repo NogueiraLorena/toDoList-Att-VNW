@@ -87,3 +87,48 @@ p {
   font-weight: 1em;
   font-size: 0.9em;
 }
+
+input {
+  width: 15rem;
+  height: 2rem;
+  border: solid 0.8px #424242;
+  border-radius: 0.5rem;
+}
+
+/* @media(max-width: 200px){
+  body {
+  font-family: sans-serif;
+  color: #f0f8ff;
+  background-color: rgb(117, 66, 66);
+  
+}
+  }
+   */
+
+/* @media(min-width:201px) and (max-width: 350px){ 
+    body {
+  font-family: sans-serif;
+  color: #f0f8ff;
+  background-color: rgb(117, 66, 66);
+  
+}
+  }     */
+
+/* @media(min-width:351px) and (max-width: 500px){
+ body {
+  font-family: sans-serif;
+  color: #f0f8ff;
+  background-color: rgb(117, 66, 66);
+  
+}
+    } */
+
+/* @media(min-width:501px) and (max-width: 900px){
+    body {
+  font-family: sans-serif;
+  color: #f0f8ff;
+  background-color: rgb(117, 66, 66);
+  
+}
+
+} */

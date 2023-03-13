@@ -16,6 +16,7 @@ export default class App extends React.Component {
     this.setState({
       minhaLista: this.state.minhaLista.concat({
         afazeres: this.state.afazeres,
+
         id: Math.random()
       }),
       afazeres: ""
@@ -38,7 +39,7 @@ export default class App extends React.Component {
       <>
         <h1> Atividade em Aula </h1>
         <h2> To Do List - (10/03)</h2>
-        <input placeholder="Add um Afazer" onChange={this.hadleChange} />
+        <input placeholder="Adicionar um Afazer" onChange={this.hadleChange} />
         <button className="addButton" onClick={this.addTask}>
           Adicionar Afazer
         </button>
